@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VAPAC | Production Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">V</span><div><strong>VAPAC</strong><small>BIO-PLASTICS PRIVATE LIMITED</small></div></div>
+    <nav id="nav">
+      <button data-view="dashboard" class="active">▦ <span>Dashboard</span></button>
+      <button data-view="entry">＋ <span>New Production Entry</span></button>
+      <button data-view="ledger">▤ <span>Production Ledger</span></button>
+      <button data-view="batches">◈ <span>Batch Management</span></button>
+      <p>MASTERS</p>
+      <button data-view="products">▣ <span>Products</span></button><button data-view="machines">⚙ <span>Machines</span></button><button data-view="materials">◒ <span>Raw Materials</span></button><button data-view="finished">✓ <span>Finished Goods</span></button>
+      <p>REPORTS</p>
+      <button data-view="losses">△ <span>Wastage & Rejection</span></button><button data-view="performance">◴ <span>Machine Performance</span></button><button data-view="shifts">⇄ <span>Shift-wise Report</span></button><button data-view="summary">▥ <span>Daily / Monthly Summary</span></button><button data-view="print">▧ <span>Printable Ledger</span></button>
+    </nav>
+    <div class="side-footer">Local browser data<br><button id="resetData" class="link-danger">Reset demo data</button></div>
+  </aside>
+  <main>
+    <header><div><h1 id="pageTitle">Dashboard</h1><p id="todayLabel"></p></div><div class="header-actions"><label class="global-search">⌕ <input id="globalSearch" placeholder="Search batches, products, machines…"></label><button class="outline" id="exportBtn">⇩ Export CSV</button><button class="primary" id="quickEntry">+ New Entry</button></div></header>
+    <section id="app"></section>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
